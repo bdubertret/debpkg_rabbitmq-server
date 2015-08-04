@@ -1,0 +1,4 @@
+debian/ocf/rabbitmq-server /usr/lib/ocf/resource.d/rabbitmq/
+debian/rabbitmq-server-wait /usr/lib/rabbitmq/bin
+debian/rabbitmq-script-wrapper /usr/lib/rabbitmq/bin
+debian/rabbitmq-env.conf	/etc/rabbitmq

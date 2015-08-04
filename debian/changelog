@@ -1,0 +1,467 @@
+rabbitmq-server (3.5.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 04 Aug 2015 14:52:31 +0200
+
+rabbitmq-server (3.5.1-2) unstable; urgency=medium
+
+  [ Tony Breeds ]
+  * systemd: Ensure that rabbitmq has started before marking service as
+    running (LP: #1449056).
+
+  [ James Page ]
+  * systemd: Drop use of /etc/default/rabbitmq-server.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 02 Jun 2015 11:40:59 +0100
+
+rabbitmq-server (3.5.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 13 May 2015 21:35:52 +0100
+
+rabbitmq-server (3.4.3-2) unstable; urgency=medium
+
+  * Restore missing changes from 3.4.2-4.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 02 Feb 2015 07:44:33 +0200
+
+rabbitmq-server (3.4.3-1) unstable; urgency=medium
+
+  * New upstream point release.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 28 Jan 2015 16:12:32 +0000
+
+rabbitmq-server (3.4.2-4) unstable; urgency=medium
+
+  * Re-added /usr/lib/erlang/lib /var/lib/rabbitmq/mnesia and
+    /var/log/rabbitmq which I removed form the package by mistake on the last
+    upload.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 Jan 2015 13:11:02 +0000
+
+rabbitmq-server (3.4.2-3) unstable; urgency=medium
+
+  * Removes debian/README which is useless (Closes: #703021).
+  * Provides a default /etc/rabbitmq/rabbitmq-env.conf (Closes: #543638).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 27 Jan 2015 15:08:08 +0100
+
+rabbitmq-server (3.4.2-2) unstable; urgency=medium
+
+  * d/rabbitmq-server.dirs: Restore missing /etc/rabbitmq directory
+    (LP: #1410155).
+
+ -- James Page <james.page@ubuntu.com>  Tue, 13 Jan 2015 09:53:47 +0000
+
+rabbitmq-server (3.4.2-1) unstable; urgency=medium
+
+  [ James Page ]
+  * New upstream point release.
+  * d/control: Update for new maintainer information, add VCS repository
+    locations.
+  * d/source/format: Switch packaging to source format 3.0 (quilt).
+  * d/compat,control: Bump debhelper compat level to 9.
+  * d/*: wrap-and-sort.
+  * d/*: Move to standard debhelper, drop use of cdbs.
+  * d/rules,control,rabbitmq-server.service: Add systemd service
+    configuration.
+  * d/control: Bumped Standards-Version 3.9.6, no changes.
+
+  [ Thomas Goirand ]
+  * d/copyright: Rewrote as format 1.0.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 19 Dec 2014 11:09:20 +0000
+
+rabbitmq-server (3.4.1-1) unstable; urgency=high
+
+  * New upstream release.
+
+ -- Blair Hester <bhester@gopivotal.com>  Tue, 04 Nov 2014 07:33:44 +0100
+
+rabbitmq-server (3.3.5-1) unstable; urgency=low
+
+  * New upstream release:
+    - Provides unminimized versions of all bundled Javascript
+      libraries (Closes: #736781).
+  * d/control: Added Blair Hester to Uploaders, dropped Emile Joubert 
+    (thanks for all your work Emile!).
+
+ -- Blair Hester <bhester@gopivotal.com>  Tue, 12 Aug 2014 11:47:14 +0100
+
+rabbitmq-server (3.3.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Tue, 24 Jun 2014 18:00:48 +0100
+
+rabbitmq-server (3.3.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Tue, 17 Jun 2014 16:59:14 +0100
+
+rabbitmq-server (3.3.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Tue, 29 Apr 2014 21:05:49 +0100
+
+rabbitmq-server (3.3.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Wed, 02 Apr 2014 16:23:08 +0100
+
+rabbitmq-server (3.2.4-1.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Bind on 127.0.0.1 by default, to avoid listening on all ipv6 interface with
+    guest/guest as default configured user. Note that this only fixes *new*
+    installation, and that any already existing setup will have to edit the
+    /etc/rabbitmq/rabbitmq-env.conf manually if affected. (Closes: #727607)
+  * Removed useless and deprecated DM-Upload field.
+  * Cleans plugins-src/rabbitmq-server to be able to build twice. Also cleans
+    debian/postrm which is generated from debian/postrm.in and plugins/README.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 31 Mar 2014 06:11:46 +0000
+
+rabbitmq-server (3.2.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Tue, 04 Mar 2014 13:21:45 +0000
+
+rabbitmq-server (3.2.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 23 Jan 2014 16:49:45 +0000
+
+rabbitmq-server (3.2.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Wed, 11 Dec 2013 17:31:14 +0000
+
+rabbitmq-server (3.2.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Mon, 11 Nov 2013 09:49:42 +0000
+
+rabbitmq-server (3.2.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Wed, 23 Oct 2013 15:42:19 +0100
+
+rabbitmq-server (3.1.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 07 Aug 2013 15:16:28 +0100
+
+rabbitmq-server (3.1.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 27 Jun 2013 14:06:11 +0100
+
+rabbitmq-server (3.1.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 25 Jun 2013 11:28:52 +0100
+
+rabbitmq-server (3.1.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 28 May 2013 11:15:13 +0100
+
+rabbitmq-server (3.1.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 02 May 2013 11:19:31 +0100
+
+rabbitmq-server (3.0.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Wed, 13 Mar 2013 10:53:18 +0000
+
+rabbitmq-server (3.0.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Wed, 13 Mar 2013 10:53:18 +0000
+
+rabbitmq-server (3.0.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 07 Mar 2013 10:03:31 +0000
+
+rabbitmq-server (3.0.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Tue, 31 Jan 2013 15:28:12 +0000
+
+rabbitmq-server (3.0.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Tue, 11 Dec 2012 15:47:52 +0000
+
+rabbitmq-server (3.0.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Mon, 19 Nov 2012 11:42:31 +0000
+
+rabbitmq-server (2.8.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 27 Sep 2012 16:28:21 +0100
+
+rabbitmq-server (2.8.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Wed, 22 Aug 2012 13:28:21 +0100
+
+rabbitmq-server (2.8.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 02 Aug 2012 16:12:21 +0100
+
+rabbitmq-server (2.8.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Fri, 22 Jun 2012 17:48:28 +0100
+
+rabbitmq-server (2.8.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Thu, 21 Jun 2012 13:38:57 +0100
+
+rabbitmq-server (2.8.2-2) unstable; urgency=low
+
+  * Add version numbers to plugins
+
+ -- Emile Joubert <emile@rabbitmq.com>  Tue, 01 May 2012 10:48:57 +0100
+
+rabbitmq-server (2.8.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Mon, 30 Apr 2012 14:07:32 +0100
+
+rabbitmq-server (2.8.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Fri, 23 Mar 2012 10:05:24 +0000
+
+rabbitmq-server (2.8.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emile Joubert <emile@rabbitmq.com>  Tue, 20 Mar 2012 11:55:10 +0000
+
+rabbitmq-server (2.6.1-2) unstable; urgency=low
+
+  * Add DM-Upload-Allowed flag to control file to allow Maintainer uploads
+
+ -- John Leuner <jewel@debian.org>  Mon, 19 Mar 2012 21:13:54 +0200
+
+rabbitmq-server (2.6.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Tue, 27 Sep 2011 17:53:57 +0200
+
+rabbitmq-server (2.5.0-1) unstable; urgency=low
+
+  * New upstream release 
+
+ -- John Leuner <jewel@debian.org>  Thu, 16 Jun 2011 09:55:40 +0200
+
+rabbitmq-server (2.4.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Sat, 09 Apr 2011 09:34:06 +0200
+
+rabbitmq-server (2.4.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Wed, 23 Mar 2011 21:11:17 +0200
+
+rabbitmq-server (2.3.1-1) unstable; urgency=low
+
+  * New upstream release, closes: #611253
+
+ -- John Leuner <jewel@debian.org>  Sat, 05 Feb 2011 10:21:16 +0200
+
+rabbitmq-server (2.2.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Thu, 02 Dec 2010 20:41:53 +0200
+
+rabbitmq-server (2.1.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Mon, 27 Sep 2010 20:28:06 +0200
+
+rabbitmq-server (2.0.0-2) unstable; urgency=low
+
+  * Fix various scripts that were not updated correctly in
+    - the 2.0.0-1 package, closes: #594724
+
+ -- John Leuner <jewel@debian.org>  Thu, 02 Sep 2010 18:01:37 +0200
+
+rabbitmq-server (2.0.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Sat, 28 Aug 2010 11:21:48 +0200
+
+rabbitmq-server (1.8.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Sun, 01 Aug 2010 15:47:46 +0200
+
+rabbitmq-server (1.8.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Thu, 24 Jun 2010 18:43:04 +0200
+
+rabbitmq-server (1.7.0-3) unstable; urgency=low
+
+  * Add missing entries in rabbitmq-server.init
+
+ -- John Leuner <jewel@debian.org>  Sun, 25 Oct 2009 10:21:25 +0200
+
+rabbitmq-server (1.7.0-2) unstable; urgency=low
+
+  * moved debian/init.d to rabbitmq-server.init
+  * included fixes to rabbitmq-script-wrapper
+
+ -- John Leuner <jewel@debian.org>  Wed, 14 Oct 2009 12:23:52 +0200
+
+rabbitmq-server (1.7.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Sat, 10 Oct 2009 13:28:39 +0200
+
+rabbitmq-server (1.6.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Sat, 20 Jun 2009 12:22:17 +0200
+
+rabbitmq-server (1.5.5-3) unstable; urgency=low
+
+  *  debian/control: Reduce Erlang dependencies to just
+     erlang-mnesia and erlang-os-mon, closes: #532867
+
+ -- John Leuner <jewel@debian.org>  Tue, 16 Jun 2009 14:15:20 +0200
+
+rabbitmq-server (1.5.5-2) unstable; urgency=low
+
+  * Include updates to debian package by rabbit team:
+    - quiet log rotate 
+    - update build-depends and depends for new erlang packages
+    - debian/watch file
+    - add rabbitmq-script-wrapper
+    - update init.d scripts
+    - clean /etc/rabbitmq in postrm
+
+ -- John Leuner <jewel@debian.org>  Wed, 03 Jun 2009 12:23:50 +0200
+
+rabbitmq-server (1.5.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Tue, 02 Jun 2009 12:53:32 +0200
+
+rabbitmq-server (1.5.4-4) unstable; urgency=low
+
+  * Add new dependency on erlang-os-mon to work with new erlang packages in
+    debian
+
+ -- John Leuner <jewel@debian.org>  Mon, 11 May 2009 21:20:04 +0200
+
+rabbitmq-server (1.5.4-3) unstable; urgency=low
+
+  * Previous partial upload failed
+
+ -- John Leuner <jewel@debian.org>  Fri, 10 Apr 2009 20:25:51 +0200
+
+rabbitmq-server (1.5.4-2) unstable; urgency=low
+
+  * Fix incorrect changed-by field in .changes file
+
+ -- John Leuner <jewel@debian.org>  Fri, 10 Apr 2009 19:40:04 +0200
+
+rabbitmq-server (1.5.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- John Leuner <jewel@debian.org>  Fri, 10 Apr 2009 17:54:21 +0200
+
+rabbitmq-server (1.5.0-5) unstable; urgency=low
+
+  * Include the full license for amqp-0.8.json in debian/copyright
+
+ -- John Leuner <jewel@debian.org>  Fri, 27 Feb 2009 16:16:54 +0200
+
+rabbitmq-server (1.5.0-4) unstable; urgency=low
+
+  * Clarify and explicitly list the license and copyright for
+    codegen/amqp-0.8.json
+	
+  * Explicitly list the authors and copyright for the rest of the codebase
+    at the top of debian/copyright
+	
+  * Clarify the copyright of the files in src/tcp_* . The rabbitmq authors have
+    confirmed that they are the original authors of this code and that the
+    files at http://code.google.com/p/cacherl/ were taken without their
+    knowledge from the rabbitmq project. (Comparing the commit dates in version
+    control shows that cacherl is newer)
+
+ -- John Leuner <jewel@debian.org>  Wed, 25 Feb 2009 13:10:15 +0200
+
+rabbitmq-server (1.5.0-3) unstable; urgency=low
+
+  * Previous changelog entry had an incorrect Maintainer name
+
+ -- John Leuner <jewel@debian.org>  Wed, 28 Jan 2009 16:45:33 +0200
+
+rabbitmq-server (1.5.0-2) unstable; urgency=low
+
+  * Reupload package to unstable. Mistakenly uploaded to testing last time, closes: #507902
+
+ -- John Leuner <jewel@debian.org>  Mon, 19 Jan 2009 17:38:43 +0200
+
+rabbitmq-server (1.5.0-1) testing; urgency=low
+
+  * New Upstream Release
+  * First Debian upload, closes: #507902
+
+ -- John Leuner <jewel@debian.org>  Wed, 17 Dec 2008 18:23:47 +0000

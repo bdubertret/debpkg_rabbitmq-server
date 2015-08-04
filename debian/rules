@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --parallel --with systemd
+
+DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^+]+)-.*,\1,p')
+DEB_DESTDIR=debian/rabbitmq-server
+RABBIT_LIB=$(DEB_DESTDIR)/usr/lib/rabbitmq/lib/rabbitmq_server-$(DEB_UPSTREAM_VERSION)
+RABBIT_BIN=$(DEB_DESTDIR)/usr/lib/rabbitmq/bin
+DOCDIR=$(DEB_DESTDIR)/usr/share/doc/rabbitmq-server
+
+override_dh_auto_install:
+	dh_auto_install -- TARGET_DIR=$(RABBIT_LIB) SBIN_DIR=$(RABBIT_BIN) \
+		DOC_INSTALL_DIR=$(DOCDIR) MAN_DIR=$(DEB_DESTDIR)/usr/share/man
+	rm -f $(RABBIT_LIB)/LICENSE* $(RABBIT_LIB)/INSTALL*
+
+override_dh_auto_clean:
+	rm -f plugins-src/rabbitmq-server plugins/README
+	dh_auto_clean

@@ -1,0 +1,3 @@
+/usr/lib/rabbitmq/bin/rabbitmq-script-wrapper /usr/sbin/rabbitmqctl
+/usr/lib/rabbitmq/bin/rabbitmq-script-wrapper /usr/sbin/rabbitmq-server
+/usr/lib/rabbitmq/bin/rabbitmq-script-wrapper /usr/sbin/rabbitmq-plugins

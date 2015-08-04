@@ -1,0 +1,30 @@
+Source: rabbitmq-server
+Section: net
+Priority: extra
+Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Uploaders: James Page <james.page@ubuntu.com>, Thomas Goirand <zigo@debian.org>
+Build-Depends: debhelper (>= 9~),
+               dh-systemd (>= 1.5),
+               erlang-dev,
+               erlang-nox (>= 1:13.b.3),
+               erlang-src (>= 1:13.b.3),
+               python-simplejson,
+               unzip,
+               xmlto,
+               xsltproc,
+               zip
+Standards-Version: 3.9.6
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/rabbitmq-server.git
+Vcs-Git: git://anonscm.debian.org/openstack/rabbitmq-server.git
+Homepage: http://www.rabbitmq.com/
+
+Package: rabbitmq-server
+Architecture: all
+Depends: adduser,
+         erlang-nox (>= 1:13.b.3) | esl-erlang,
+         logrotate,
+         ${misc:Depends}
+Description: AMQP server written in Erlang
+ RabbitMQ is an implementation of AMQP, the emerging standard for high
+ performance enterprise messaging. The RabbitMQ server is a robust and
+ scalable implementation of an AMQP broker.
