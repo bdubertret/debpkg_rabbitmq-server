@@ -1,3 +1,9 @@
+rabbitmq-server (3.5.4-2iscoolent1) precise; urgency=medium
+
+  * No change rebuild for precise
+
+ -- Benoit Dubertret <benoit.dubertret@iscool-e.com>  Mon, 31 Aug 2015 12:32:44 +0000
+
 rabbitmq-server (3.5.4-1) unstable; urgency=medium
 
   * New upstream release.
